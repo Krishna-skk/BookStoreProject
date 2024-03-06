@@ -1,10 +1,10 @@
 def version, mvnCmd = "mvn -s templates/cicd-settings-nexus3.xml"
       pipeline
       {
-       agent any
+       agent label 'Ansible'
         tools
         {
-            maven 'M3'
+            maven 'maven'
         }
 
         stages
